@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps { 
-               echo 'This is a minimal pipeline.' 
+               echo 'This is a minimal pipeline...' 
 	       sh 'mvn clean package'
 		script{
 			def snapshotImage = docker.build("${JOB_NAME}:${env.BUILD_ID}")
